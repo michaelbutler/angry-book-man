@@ -1,0 +1,89 @@
+@line-art-color: silver;
+@hover-state: #E1F2F5;
+@mobile-width: 767px;
+@animation-speed: 0.2s;
+
+// Mixins ~~~~~~~~~~~~~~~~~~~~~~
+.comfortable {
+    padding: 20px;
+}
+
+.cozy {
+    padding: 10px;
+}
+
+.compact {
+    padding: 5px;
+}
+
+
+body {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+h1 {
+    border-bottom: 1px solid @line-art-color;
+}
+
+.input-group-btn .glyphicon {
+    font-size: 80%;
+}
+
+.bookmarks {
+    padding: 20px 0;
+
+    li {
+        border: 1px solid @line-art-color;
+        border-radius: 4px;
+        list-style: none;
+        pointer: default;
+        opacity: 1.0;
+        -webkit-transition: opacity @animation-speed linear;
+        transition: opacity @animation-speed linear;
+
+        &.deleted {
+            opacity: 0.0;
+        }
+
+        &:hover {
+            background: @hover-state;
+
+            .glyphicon {
+                display: block;
+            }
+        }
+
+        div {
+            .compact;
+        }
+
+        .glyphicon {
+            .compact;
+            display: none;
+            cursor: pointer;
+            float: right;
+            margin-top: 3px;
+            margin-right: 3px;
+            border-radius: 4px;
+
+            &:hover {
+                background: darken(@hover-state, 20%);
+            }
+        }
+    }
+}
+
+.fun-image {
+    background: url(/static/img/captain-america.jpg) no-repeat top center;
+    border: 1px solid @line-art-color;
+    width: 100%;
+    min-height: 700px;
+}
+
+@media (max-width: @mobile-width) {
+    .fun-image {
+        min-height: 0px;
+        height: 170px;
+        background-position: 0 -281px;
+    }
+}
