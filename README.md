@@ -3,6 +3,9 @@ angry-book-man
 
 A simple bookmark manager example powered by AngularJS, PHP, and any database.  Includes basic concept of a Model, View, and Controller. Along with a data model in the browser and a RESTful JSON interface.
 
+Why "Angry"?
+==============
+Because it uses AngularJS I took the "Ang" from Angular and chose a different word.
 
 Steps to Use
 ==============
